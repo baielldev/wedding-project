@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Приглашение на свадьбу</title>
+    <meta
+      name="description"
+      content="Приглашаем вас разделить с нами самый важный день"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Marck+Script&family=Montserrat:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="petals" aria-hidden="true"></canvas>
+
+    <!-- Навигация -->
+    <nav class="nav" id="nav">
+      <a href="#top" class="nav__logo" data-monogram>А&nbsp;&amp;&nbsp;М</a>
+      <button class="nav__burger" id="burger" aria-label="Меню">
+        <span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#story">История</a></li>
+        <li><a href="#program">Программа</a></li>
+        <li><a href="#place">Место</a></li>
+        <li><a href="#dress">Дресс-код</a></li>
+        <li><a href="#rsvp">Ответ</a></li>
+      </ul>
+    </nav>
+
+    <!-- Главный экран -->
+    <header class="hero" id="top">
+      <div class="hero__inner">
+        <p class="eyebrow reveal">Мы женимся</p>
+        <h1 class="hero__names reveal">
+          <span data-groom>Алихан</span>
+          <i>&amp;</i>
+          <span data-bride>Мээрим</span>
+        </h1>
+        <p class="hero__date reveal" data-date-text>12 июня 2027</p>
+        <p class="hero__city reveal" data-city>Бишкек</p>
+        <p class="hero__guest reveal" id="guestGreeting"></p>
+        <a href="#rsvp" class="btn reveal">Подтвердить присутствие</a>
+      </div>
+      <a href="#story" class="scroll" aria-label="Вниз"><span></span></a>
+    </header>
+
+    <!-- Приглашение + таймер -->
+    <section class="section section--center" id="invite">
+      <div class="wrap narrow">
+        <p class="eyebrow reveal">Дорогие друзья и родные</p>
+        <h2 class="title reveal">
+          Приглашаем вас разделить с нами самый счастливый день
+        </h2>
+        <div class="ornament reveal"><span></span></div>
+        <p class="lead reveal">
+          Мы начинаем новую главу жизни и очень хотим, чтобы вы были рядом. Ваше
+          присутствие сделает этот день по-настоящему особенным.
+        </p>
+
+        <div class="countdown reveal" id="countdown">
+          <div><b id="cd-days">0</b><span>дней</span></div>
+          <div><b id="cd-hours">0</b><span>часов</span></div>
+          <div><b id="cd-mins">0</b><span>минут</span></div>
+          <div><b id="cd-secs">0</b><span>секунд</span></div>
+        </div>
+        <button class="btn btn--ghost reveal" id="addCal">
+          Добавить в календарь
+        </button>
+      </div>
+    </section>
+
+    <!-- История -->
+    <section class="section section--tint" id="story">
+      <div class="wrap">
+        <p class="eyebrow center reveal">Наша история</p>
+        <h2 class="title center reveal">Путь к этому дню</h2>
+        <div class="timeline">
+          <article class="tl reveal">
+            <time>2019</time>
+            <h3>Первая встреча</h3>
+            <p>
+              Напишите здесь, где и как вы познакомились. Пара тёплых строк — и
+              гости сразу почувствуют вашу историю.
+            </p>
+          </article>
+          <article class="tl reveal">
+            <time>2021</time>
+            <h3>Мы стали парой</h3>
+            <p>
+              Первое путешествие, первые мечты, первые общие планы на будущее.
+            </p>
+          </article>
+          <article class="tl reveal">
+            <time>2026</time>
+            <h3>Предложение</h3>
+            <p>Момент, когда прозвучало самое важное «да».</p>
+          </article>
+          <article class="tl reveal">
+            <time data-year>2027</time>
+            <h3>Свадьба</h3>
+            <p>И теперь мы хотим отпраздновать это вместе с вами.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Программа -->
+    <section class="section" id="program">
+      <div class="wrap narrow">
+        <p class="eyebrow center reveal">Программа дня</p>
+        <h2 class="title center reveal">Как всё будет</h2>
+        <ul class="program">
+          <li class="reveal">
+            <b>15:00</b>
+            <div>
+              <h3>Сбор гостей</h3>
+              <p>Welcome-зона, лёгкие закуски и напитки</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <b>16:00</b>
+            <div>
+              <h3>Церемония</h3>
+              <p>Торжественная регистрация брака</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <b>17:00</b>
+            <div>
+              <h3>Фотосессия</h3>
+              <p>Общие фото с молодожёнами</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <b>18:00</b>
+            <div>
+              <h3>Банкет</h3>
+              <p>Ужин, тосты, танцы и сюрпризы</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <b>23:00</b>
+            <div>
+              <h3>Завершение вечера</h3>
+              <p>Торт и тёплые слова на прощание</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Место -->
+    <section class="section section--tint" id="place">
+      <div class="wrap">
+        <p class="eyebrow center reveal">Место проведения</p>
+        <h2 class="title center reveal" data-venue>Банкетный зал «Название»</h2>
+        <p class="lead center reveal" data-address>
+          г. Бишкек, ул. Примерная, 1
+        </p>
+        <div class="map reveal">
+          <iframe
+            id="mapFrame"
+            title="Карта"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="center reveal">
+          <a class="btn" id="routeLink" target="_blank" rel="noopener"
+            >Построить маршрут</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Дресс-код -->
+    <section class="section section--center" id="dress">
+      <div class="wrap narrow">
+        <p class="eyebrow reveal">Дресс-код</p>
+        <h2 class="title reveal">Будем рады видеть вас в нежных тонах</h2>
+        <div class="palette reveal">
+          <i style="--c: #f3e9dc" title="Айвори"></i>
+          <i style="--c: #d9b8a6" title="Пудровый"></i>
+          <i style="--c: #a9b59a" title="Шалфей"></i>
+          <i style="--c: #6b7b62" title="Оливковый"></i>
+          <i style="--c: #b08d57" title="Золото"></i>
+        </div>
+        <p class="lead reveal">
+          Просим воздержаться от белого и ярко-красного — эти цвета оставим
+          невесте и нашему декору.
+        </p>
+      </div>
+    </section>
+
+    <!-- RSVP -->
+    <section class="section section--dark" id="rsvp">
+      <div class="wrap narrow">
+        <p class="eyebrow center reveal">RSVP</p>
+        <h2 class="title center reveal">
+          Подтвердите, пожалуйста, ваше присутствие
+        </h2>
+        <p class="lead center reveal">
+          Просим ответить до <b data-rsvp-deadline>1 мая 2027</b>
+        </p>
+
+        <form class="form reveal" id="rsvpForm" novalidate>
+          <label
+            >Ваше имя и фамилия
+            <input
+              type="text"
+              name="name"
+              id="fName"
+              required
+              placeholder="Например, Айбек Сыдыков"
+            />
+          </label>
+
+          <fieldset>
+            <legend>Вы придёте?</legend>
+            <label class="radio"
+              ><input type="radio" name="attend" value="yes" checked /><span
+                >С радостью буду</span
+              ></label
+            >
+            <label class="radio"
+              ><input type="radio" name="attend" value="no" /><span
+                >К сожалению, не смогу</span
+              ></label
+            >
+          </fieldset>
+
+          <div id="moreFields">
+            <label
+              >Количество гостей
+              <select name="count" id="fCount">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
+            </label>
+            <label
+              >Пожелания по меню или аллергии
+              <input
+                type="text"
+                name="food"
+                id="fFood"
+                placeholder="Необязательно"
+              />
+            </label>
+          </div>
+
+          <label
+            >Пожелание молодожёнам
+            <textarea
+              name="wish"
+              id="fWish"
+              rows="3"
+              placeholder="Необязательно"
+            ></textarea>
+          </label>
+
+          <p class="form__error" id="formError" role="alert"></p>
+          <div class="form__btns">
+            <a class="btn btn--gold" id="sendWa" target="_blank" rel="noopener"
+              >Отправить в WhatsApp</a
+            >
+            <a
+              class="btn btn--ghost-light"
+              id="sendTg"
+              target="_blank"
+              rel="noopener"
+              >Отправить в Telegram</a
+            >
+          </div>
+          <p class="form__hint" id="formHint"></p>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p class="script" data-monogram-footer>Алихан &amp; Мээрим</p>
+      <p>С любовью и нетерпением ждём вас</p>
+      <small>Контакты: <a id="phoneLink" href="#">+996 000 000 000</a></small>
+    </footer>
+
+    <button class="music" id="music" aria-label="Музыка" hidden>♪</button>
+    <audio id="audio" loop preload="auto"></audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
